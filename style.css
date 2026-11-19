@@ -1,0 +1,288 @@
+
+header {
+    background-color: darkgray;
+    padding: 20px;
+    color: #145214;
+}
+body {
+    background-color: rgb(221, 221, 229);
+}
+
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+nav a {
+    color: hsl(240, 14%, 95%);
+    text-decoration: none;
+    background-color: rgb(47, 8, 240);
+    
+}
+
+nav input {
+    padding: 8px;
+}
+
+main {
+    text-align: center;
+    padding: 10px 20px;
+}
+
+
+h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+    color: rgb(80, 4, 245);
+    
+}
+
+h2 {
+    color: #1045e3;
+}
+
+main p {
+    font-size: 16px;
+    line-height: 1.4;
+    margin-top: 10px;
+}
+
+
+.galerie {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.galerie img {
+    width: 23%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.services {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    margin: 30px 0;
+}
+
+.service {
+    flex: 1;
+    text-align: center;
+}
+
+.galerie-bas {
+    margin-top: 30px;
+}
+
+footer {
+    background-color: #777a83;
+    height: 50px;
+    margin-top: 30px;
+}
+
+.equipe {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin: 30px auto;
+    
+}
+
+.equipe img {
+    width: 250px;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* FORMULAIRE DE CONTACT */
+
+form {
+    width: 90%;
+    max-width: 500px;
+    margin: 30px auto;
+    padding: 25px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-sizing: border-box;
+    background-color: white;
+}
+
+
+
+form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+
+form select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+
+
+form input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+
+
+form input[type="text"]:focus,
+form select:focus {
+    outline: 2px solid darkgreen;
+    border-color: darkgreen;
+}
+
+
+form input[type="checkbox"] {
+    margin-right: 8px;
+    cursor: pointer;
+}
+
+
+
+form input[type="checkbox"] + label {
+    display: inline;
+    font-weight: normal;
+}
+
+form button {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    margin-top: 20px;
+    background-color: darkgreen;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+
+
+form button:hover {
+    background-color: #145214;
+}
+
+/* nde ze images 4 */
+.membre {
+    text-align: center;
+    width: 250px;
+}
+.membre img{
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+ .membre h3 {
+    color: #b407db;
+    margin-top: 15px;
+ }
+ .membre p {
+    font-size: 20px;
+    color: black;
+ }
+
+ .membre summary {
+    background-color: #1045e3;
+    color: burlywood;
+
+ }
+ 
+
+
+ .galerie {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 15px;
+
+ }
+ .galerie img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+ }
+
+/* TABLETTE */
+@media screen and (max-width: 768px) {
+
+    /* Galerie */
+    .galerie {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+
+    /* Images */
+    .galerie img {
+        height: 200px;
+    }
+
+    /* Formulaire */
+    form {
+        width: 90%;
+    }
+
+}
+
+
+/* TELEPHONE */
+@media screen and (max-width: 480px) {
+
+    /* Menu */
+    nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    /* Galerie */
+    .galerie {
+        grid-template-columns: 1fr;
+    }
+
+    /* Images */
+    .galerie img {
+        height: 250px;
+    }
+
+    /* Titres */
+    h1 {
+        font-size: 24px;
+        text-align: center;
+    }
+
+    /* Paragraphes */
+    p {
+        font-size: 14px;
+    }
+
+    
+    form {
+        width: 95%;
+        padding: 15px;
+    }
+
+}
